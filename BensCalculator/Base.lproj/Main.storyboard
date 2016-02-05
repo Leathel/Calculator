@@ -192,6 +192,7 @@
                                     <rect key="frame" x="326" y="664" width="30" height="30"/>
                                 </variation>
                                 <connections>
+                                    <action selector="equalsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QA5-O1-zC2"/>
                                     <action selector="functionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UZq-da-RSh"/>
                                 </connections>
                             </button>
@@ -265,6 +266,31 @@
                                 </variation>
                                 <connections>
                                     <action selector="functionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b0w-aj-jSv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgR-Fg-zcm">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fgR-Fg-zcm" secondAttribute="height" multiplier="89:44" id="tzV-SH-skE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="."/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="tzV-SH-skE"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="tzV-SH-skE"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="118" y="706" width="89" height="44"/>
+                                </variation>
+                                <connections>
+                                    <action selector="buttonNumPad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M07-qA-dNA"/>
+                                    <action selector="functionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3vk-LI-Pcq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5V-SQ-Aib">
@@ -456,33 +482,27 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="179" y="36" width="42" height="31"/>
+                                    <rect key="frame" x="71" y="36" width="289" height="31"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgR-Fg-zcm">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="fgR-Fg-zcm" secondAttribute="height" multiplier="89:44" id="tzV-SH-skE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="."/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="tzV-SH-skE"/>
-                                    </mask>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWi-GO-hJf">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="49" y="75" width="289" height="31"/>
                                 </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="tzV-SH-skE"/>
-                                    </mask>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAj-qW-3nG">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="34" y="96" width="289" height="31"/>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="118" y="706" width="89" height="44"/>
-                                </variation>
-                                <connections>
-                                    <action selector="functionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3vk-LI-Pcq"/>
-                                </connections>
-                            </button>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -710,6 +730,7 @@
                                 <exclude reference="5p1-0H-Ra6"/>
                                 <exclude reference="EoS-sK-n1c"/>
                                 <exclude reference="q0h-CC-Idl"/>
+                                <exclude reference="fgR-Fg-zcm"/>
                                 <exclude reference="n5V-SQ-Aib"/>
                                 <exclude reference="Z96-hJ-siP"/>
                                 <exclude reference="7Cr-hB-gHE"/>
@@ -719,7 +740,8 @@
                                 <exclude reference="HnG-vF-lip"/>
                                 <exclude reference="9XN-ro-yIz"/>
                                 <exclude reference="wYp-30-9aS"/>
-                                <exclude reference="fgR-Fg-zcm"/>
+                                <exclude reference="PWi-GO-hJf"/>
+                                <exclude reference="DAj-qW-3nG"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Kwd-if-ntV"/>
@@ -841,6 +863,7 @@
                                 <include reference="5p1-0H-Ra6"/>
                                 <include reference="EoS-sK-n1c"/>
                                 <include reference="q0h-CC-Idl"/>
+                                <include reference="fgR-Fg-zcm"/>
                                 <include reference="n5V-SQ-Aib"/>
                                 <include reference="Z96-hJ-siP"/>
                                 <include reference="7Cr-hB-gHE"/>
@@ -850,7 +873,8 @@
                                 <include reference="HnG-vF-lip"/>
                                 <include reference="9XN-ro-yIz"/>
                                 <include reference="wYp-30-9aS"/>
-                                <include reference="fgR-Fg-zcm"/>
+                                <include reference="PWi-GO-hJf"/>
+                                <include reference="DAj-qW-3nG"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Kwd-if-ntV"/>
@@ -963,6 +987,8 @@
                     </view>
                     <connections>
                         <outlet property="labelResult" destination="9XN-ro-yIz" id="d8F-Ih-gb9"/>
+                        <outlet property="storedNumLabel" destination="DAj-qW-3nG" id="QaU-Rx-x69"/>
+                        <outlet property="testLabel" destination="PWi-GO-hJf" id="Wvh-y7-gyB"/>
                         <outlet property="warningLabel" destination="wYp-30-9aS" id="bZB-BC-yjz"/>
                     </connections>
                 </viewController>
