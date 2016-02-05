@@ -28,6 +28,7 @@ class ViewController: UIViewController {
             
     }
     @IBOutlet weak var storedNumLabel: UILabel!
+    @IBOutlet weak var currentFunctionLabel: UILabel!
     @IBOutlet weak var labelResult: UILabel!
     @IBOutlet weak var warningLabel: UILabel!
     @IBOutlet weak var testLabel: UILabel!
@@ -46,7 +47,26 @@ class ViewController: UIViewController {
         {
             if(currentNumString == "0")
             {
-                currentNumString = sender.currentTitle!
+                
+                if(sender.currentTitle == ".")
+                {
+                    currentNumString = "0.0"
+                }
+                else
+                {
+                    currentNumString = sender.currentTitle!
+                }
+            }
+            else if(currentNumString == "0.0")
+            {
+                if(sender.currentTitle == "0")
+                {
+                    currentNumString = "0.0" + sender.currentTitle!
+                }
+                else{
+                    currentNumString = "0." + sender.currentTitle!
+
+                }
             }
             else
             {
@@ -55,6 +75,7 @@ class ViewController: UIViewController {
             
             labelResult.text = currentNumString
             currentNum = Float(currentNumString)!
+            
         }
         warningLabel.text = "Stored Number: " + String(storedNum)
         testLabel.text = "Current Number: " + String(currentNum)
@@ -73,6 +94,8 @@ class ViewController: UIViewController {
             labelResult.text = currentNumString
             warningLabel.text = "Stored Number: " + String(storedNum)
             testLabel.text = "Current Number: " + String(currentNum)
+            currentOperation = ""
+            currentFunctionLabel.text = ""
             
         }
         //Delete
@@ -100,6 +123,7 @@ class ViewController: UIViewController {
 
     @IBAction func equalsClicked(sender: UIButton) {
         
+        currentFunctionLabel.text = currentOperation
         if (currentOperation == "")
         {
             
@@ -108,27 +132,30 @@ class ViewController: UIViewController {
         {
             
             result = storedNum + currentNum
-            storedNum = result
-            currentNumString = String(result)
-            labelResult.text = currentNumString
-            warningLabel.text = "Stored Number: " + String(storedNum)
-            testLabel.text = "Current Number: " + String(currentNum)
+            
+            
             
         }
         else if(currentOperation == "-")
         {
+            result = storedNum - currentNum
         }
 
         else if(currentOperation == "/")
         {
+            result = storedNum / currentNum
         }
 
         else if(currentOperation == "X")
         {
-            
+           result = storedNum * currentNum
         }
+        storedNum = result
+        currentNumString = String(result)
+        labelResult.text = currentNumString
+        warningLabel.text = "Stored Number: " + String(storedNum)
+        testLabel.text = "Current Number: " + String(currentNum)
 
-        
     }
 }
 

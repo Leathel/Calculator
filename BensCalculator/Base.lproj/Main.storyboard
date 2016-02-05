@@ -193,7 +193,6 @@
                                 </variation>
                                 <connections>
                                     <action selector="equalsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QA5-O1-zC2"/>
-                                    <action selector="functionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UZq-da-RSh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5p1-0H-Ra6">
@@ -289,8 +288,7 @@
                                     <rect key="frame" x="118" y="706" width="89" height="44"/>
                                 </variation>
                                 <connections>
-                                    <action selector="buttonNumPad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M07-qA-dNA"/>
-                                    <action selector="functionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3vk-LI-Pcq"/>
+                                    <action selector="buttonNumPad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p81-8J-SWs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5V-SQ-Aib">
@@ -476,15 +474,6 @@
                                     <rect key="frame" x="71" y="36" width="289" height="31"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="9XN-ro-yIz" customClass="labelResult">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="26" y="120" width="348" height="87"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAj-qW-3nG">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -501,6 +490,24 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="49" y="75" width="289" height="31"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRw-wa-RrI">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="63" y="225" width="289" height="31"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="9XN-ro-yIz" customClass="labelResult">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="26" y="120" width="348" height="87"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -739,9 +746,10 @@
                                 <exclude reference="waa-z9-Sbt"/>
                                 <exclude reference="HnG-vF-lip"/>
                                 <exclude reference="wYp-30-9aS"/>
-                                <exclude reference="9XN-ro-yIz"/>
                                 <exclude reference="DAj-qW-3nG"/>
                                 <exclude reference="PWi-GO-hJf"/>
+                                <exclude reference="BRw-wa-RrI"/>
+                                <exclude reference="9XN-ro-yIz"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Kwd-if-ntV"/>
@@ -872,9 +880,10 @@
                                 <include reference="waa-z9-Sbt"/>
                                 <include reference="HnG-vF-lip"/>
                                 <include reference="wYp-30-9aS"/>
-                                <include reference="9XN-ro-yIz"/>
                                 <include reference="DAj-qW-3nG"/>
                                 <include reference="PWi-GO-hJf"/>
+                                <include reference="BRw-wa-RrI"/>
+                                <include reference="9XN-ro-yIz"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Kwd-if-ntV"/>
@@ -986,6 +995,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="currentFunctionLabel" destination="BRw-wa-RrI" id="4pg-8f-BhE"/>
                         <outlet property="labelResult" destination="9XN-ro-yIz" id="d8F-Ih-gb9"/>
                         <outlet property="storedNumLabel" destination="DAj-qW-3nG" id="QaU-Rx-x69"/>
                         <outlet property="testLabel" destination="PWi-GO-hJf" id="Wvh-y7-gyB"/>
