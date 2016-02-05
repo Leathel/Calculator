@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
+    // declare global vars
     var currentNum = Float()
     var storedNum = Float()
     var currentNumString = String()
@@ -26,6 +26,7 @@ class ViewController: UIViewController {
             currentNumString = "0"
             
     }
+    //declare labels
     @IBOutlet weak var storedNumLabel: UILabel!
     @IBOutlet weak var currentFunctionLabel: UILabel!
     @IBOutlet weak var labelResult: UILabel!
@@ -36,17 +37,18 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+//all the numbers actions take place in here
     @IBAction func buttonNumPad(sender: UIButton) {
         
         
-        
+        //if there are too many numbers, display this
         if(labelResult.text!.characters.count >= 9)
         {
-            warningLabel.text = "Too Many Numbers Bro"
+            testLabel.text = "Too Many Numbers Bro"
         }
         else
         {
+            //The follow will check for leading and trailing zeros and handle them apropriatly
             if(currentNumString == "0")
             {
                 
@@ -74,7 +76,7 @@ class ViewController: UIViewController {
             {
                 currentNumString = labelResult.text! + sender.currentTitle!
             }
-            
+            //each time  a number is clicked it is concatenated onto the display label and casted into an int
             labelResult.text = currentNumString
             currentNum = Float(currentNumString)!
             
@@ -125,12 +127,13 @@ class ViewController: UIViewController {
 
     @IBAction func equalsClicked(sender: UIButton) {
         
-        
+        // I put this in a separate method because I was I had more functionality that required it to be this way. That didnt work tho so now it is like this.
         equalsFunction()
         
     }
     func equalsFunction(){
         
+        //determines which function is being used, does the math, and then displays it all
         currentFunctionLabel.text = currentOperation
         if (currentOperation != "")
         {
@@ -156,6 +159,7 @@ class ViewController: UIViewController {
             currentNumString = String(result)
             labelResult.text = currentNumString
             warningLabel.text = String(storedNum)
+            testLabel.text = ""
         }
         
         

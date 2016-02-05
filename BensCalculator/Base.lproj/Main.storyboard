@@ -465,6 +465,15 @@
                                     <action selector="functionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dzY-Fz-QG1"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTX-7A-LEt">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="34" y="69" width="289" height="31"/>
+                                </variation>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAj-qW-3nG">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -499,15 +508,6 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="34" y="36" width="289" height="31"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTX-7A-LEt">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="34" y="69" width="289" height="31"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -745,11 +745,11 @@
                                 <exclude reference="pOQ-o2-OH2"/>
                                 <exclude reference="waa-z9-Sbt"/>
                                 <exclude reference="HnG-vF-lip"/>
+                                <exclude reference="iTX-7A-LEt"/>
                                 <exclude reference="DAj-qW-3nG"/>
                                 <exclude reference="BRw-wa-RrI"/>
                                 <exclude reference="9XN-ro-yIz"/>
                                 <exclude reference="wYp-30-9aS"/>
-                                <exclude reference="iTX-7A-LEt"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Kwd-if-ntV"/>
@@ -879,11 +879,11 @@
                                 <include reference="pOQ-o2-OH2"/>
                                 <include reference="waa-z9-Sbt"/>
                                 <include reference="HnG-vF-lip"/>
+                                <include reference="iTX-7A-LEt"/>
                                 <include reference="DAj-qW-3nG"/>
                                 <include reference="BRw-wa-RrI"/>
                                 <include reference="9XN-ro-yIz"/>
                                 <include reference="wYp-30-9aS"/>
-                                <include reference="iTX-7A-LEt"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Kwd-if-ntV"/>
