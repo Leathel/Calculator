@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     var currentNumString = String()
     var result = Float()
     var currentOperation = String()
-    var operationClicked = Bool()
     
         override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,14 +30,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var currentFunctionLabel: UILabel!
     @IBOutlet weak var labelResult: UILabel!
     @IBOutlet weak var warningLabel: UILabel!
-    @IBOutlet weak var testLabel: UILabel!
 
+    @IBOutlet weak var testLabel: UILabel!
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
     @IBAction func buttonNumPad(sender: UIButton) {
+        
+        
+        
         if(labelResult.text!.characters.count >= 9)
         {
             warningLabel.text = "Too Many Numbers Bro"
@@ -77,8 +79,7 @@ class ViewController: UIViewController {
             currentNum = Float(currentNumString)!
             
         }
-        warningLabel.text = "Stored Number: " + String(storedNum)
-        testLabel.text = "Current Number: " + String(currentNum)
+        warningLabel.text = String(storedNum)
         
     }
     @IBAction func functionButton(sender: UIButton) {
@@ -91,9 +92,9 @@ class ViewController: UIViewController {
             currentNum = 0
             currentNumString = "0"
             storedNum = 0
+            result = 0
             labelResult.text = currentNumString
-            warningLabel.text = "Stored Number: " + String(storedNum)
-            testLabel.text = "Current Number: " + String(currentNum)
+            warningLabel.text = String(storedNum)
             currentOperation = ""
             currentFunctionLabel.text = ""
             
@@ -107,12 +108,13 @@ class ViewController: UIViewController {
         else if(currentOperation == "+" || currentOperation == "-" || currentOperation == "X" || currentOperation == "/")
         {
             
-            storedNum = currentNum
-            currentNum = 0
-            currentNumString = "0"
-            labelResult.text = currentNumString
-            warningLabel.text = "Stored Number: " + String(storedNum)
-            testLabel.text = "Current Number: " + String(currentNum)
+                storedNum = currentNum
+                currentNum = 0
+                currentNumString = "0"
+                labelResult.text = currentNumString
+
+            
+            warningLabel.text = String(storedNum)
             
         }
         
@@ -123,38 +125,40 @@ class ViewController: UIViewController {
 
     @IBAction func equalsClicked(sender: UIButton) {
         
+        
+        equalsFunction()
+        
+    }
+    func equalsFunction(){
+        
         currentFunctionLabel.text = currentOperation
-        if (currentOperation == "")
+        if (currentOperation != "")
         {
-            
+            if(currentOperation == "+")
+            {
+                result = storedNum + currentNum
+            }
+            else if(currentOperation == "-")
+            {
+                result = storedNum - currentNum
+            }
+                
+            else if(currentOperation == "/")
+            {
+                result = storedNum / currentNum
+            }
+                
+            else if(currentOperation == "X")
+            {
+                result = storedNum * currentNum
+            }
+            storedNum = result
+            currentNumString = String(result)
+            labelResult.text = currentNumString
+            warningLabel.text = String(storedNum)
         }
-        else if(currentOperation == "+")
-        {
-            
-            result = storedNum + currentNum
-            
-            
-            
-        }
-        else if(currentOperation == "-")
-        {
-            result = storedNum - currentNum
-        }
-
-        else if(currentOperation == "/")
-        {
-            result = storedNum / currentNum
-        }
-
-        else if(currentOperation == "X")
-        {
-           result = storedNum * currentNum
-        }
-        storedNum = result
-        currentNumString = String(result)
-        labelResult.text = currentNumString
-        warningLabel.text = "Stored Number: " + String(storedNum)
-        testLabel.text = "Current Number: " + String(currentNum)
+        
+        
 
     }
 }
